@@ -19,7 +19,9 @@ To install via bower run
 	
 3. If ou have alrady twitter bootstrap navbar in your HTML, just add off-canvas-navbar directive to your container (you must have it as a direct child element of container)
 
+	```html
 	<div off-canvas-navbar></div>
+	```	
 	
 or if you don't have twitter bootstrap navbar in your HTML use this in your container
 
