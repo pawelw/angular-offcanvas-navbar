@@ -20,6 +20,18 @@ Install
 	<div off-canvas-navbar></div>
 	```	
 	
+4. Use along with twitter bootstrap navbar. If you don't have navbar yet you can use this code as a starter
+
+	```html
+			<nav id="navbar" class="visible-xs">
+				<ul>
+					<li class="relative"><a ng-href="#/">Home</a>
+					<li class="relative"><a ng-href="#/">Home 2</a>
+					<li class="relative"><a ng-href="#/">Home 3</a>
+				</ul>
+			</nav>
+	```
+	
 By default CSS assumes that ".container" is the parent HTML element that will be animated. If you want to use different class name please change in offcanvas-navbar.css or offcanvas-navbar.scss if you are using sass.
 
 Example
