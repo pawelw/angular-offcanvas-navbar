@@ -7642,22 +7642,21 @@ td.visible-print {
 .container {
   overflow: hidden;
   position: relative;
-  width: 100%;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-/* line 24, ../main.scss */
+/* line 23, ../main.scss */
 .container.menu-active {
   overflow: visible;
 }
-/* line 27, ../main.scss */
+/* line 26, ../main.scss */
 .container.expanded {
   -webkit-transform: translate3d(-200px, 0, 0);
   transform: translate3d(-200px, 0, 0);
 }
-/* line 31, ../main.scss */
+/* line 30, ../main.scss */
 .container .wrap {
   padding: 20px;
 }
@@ -7665,7 +7664,7 @@ td.visible-print {
 /*
 * 3 lines Button styles
 -----------------------*/
-/* line 53, ../main.scss */
+/* line 52, ../main.scss */
 .lines-button {
   display: none;
   transition: .3s;
@@ -7679,22 +7678,22 @@ td.visible-print {
   border: 0;
   -webkit-appearance: none;
 }
-/* line 67, ../main.scss */
+/* line 66, ../main.scss */
 .lines-button:hover {
   opacity: 1;
 }
-/* line 71, ../main.scss */
+/* line 70, ../main.scss */
 .lines-button:active {
   transition: 0;
   background: rgba(0, 0, 0, 0.1);
   outline: none;
 }
-/* line 76, ../main.scss */
+/* line 75, ../main.scss */
 .lines-button:focus {
   outline: none;
 }
 
-/* line 81, ../main.scss */
+/* line 80, ../main.scss */
 .lines {
   display: inline-block;
   width: 2.5em;
@@ -7705,7 +7704,7 @@ td.visible-print {
   position: relative;
   /*create the upper and lower lines as pseudo-elements of the middle line*/
 }
-/* line 87, ../main.scss */
+/* line 86, ../main.scss */
 .lines:before, .lines:after {
   display: inline-block;
   width: 2.5em;
@@ -7719,34 +7718,34 @@ td.visible-print {
   transform-origin: 0.17857em center;
   -webkit-transform-origin: 0.17857em center;
 }
-/* line 96, ../main.scss */
+/* line 95, ../main.scss */
 .lines:before {
   top: 0.625em;
 }
-/* line 97, ../main.scss */
+/* line 96, ../main.scss */
 .lines:after {
   top: -0.625em;
 }
 
-/* line 100, ../main.scss */
+/* line 99, ../main.scss */
 .lines-button.x.expanded .lines {
   /*hide the middle line*/
   background: transparent;
   /*overlay the lines by setting both their top values to 0*/
 }
-/* line 106, ../main.scss */
+/* line 105, ../main.scss */
 .lines-button.x.expanded .lines:before, .lines-button.x.expanded .lines:after {
   transform-origin: 50% 50%;
   -webkit-transform-origin: 50% 50%;
   top: 0;
   width: 2.5em;
 }
-/* line 114, ../main.scss */
+/* line 113, ../main.scss */
 .lines-button.x.expanded .lines:before {
   transform: rotate3d(0, 0, 1, 45deg);
   -webkit-transform: rotate3d(0, 0, 1, 45deg);
 }
-/* line 118, ../main.scss */
+/* line 117, ../main.scss */
 .lines-button.x.expanded .lines:after {
   transform: rotate3d(0, 0, 1, -45deg);
   -webkit-transform: rotate3d(0, 0, 1, -45deg);
@@ -7757,12 +7756,12 @@ td.visible-print {
 * For screens lower that 767px only
 ---------------------------------------------*/
 @media only screen and (max-width: 767px) {
-  /* line 130, ../main.scss */
+  /* line 129, ../main.scss */
   .lines-button {
     display: inline-block;
   }
 
-  /* line 134, ../main.scss */
+  /* line 133, ../main.scss */
   nav#navbar {
     position: absolute;
     top: 0px;
@@ -7773,14 +7772,14 @@ td.visible-print {
     box-shadow: inset 0 0 30px #1B1B1B;
     background: #2B2B2B;
   }
-  /* line 142, ../main.scss */
+  /* line 141, ../main.scss */
   nav#navbar ul {
     margin-left: 0px;
     padding: 15px;
     width: 200px;
     /* 170px if you don't use box-sizing: border-box; */
   }
-  /* line 146, ../main.scss */
+  /* line 145, ../main.scss */
   nav#navbar ul li {
     list-style-type: none;
     padding: 10px;

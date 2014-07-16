@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ngOffcanvas')
+var angularOffCanvas = angular.module('ngOffcanvas', [])
 	
 	/**!
 	 * AngularJS directve

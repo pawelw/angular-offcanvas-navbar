@@ -32,13 +32,15 @@
       <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
     <div class="container">
-			<!-- Brand and toggle get grouped for better mobile display -->
 			
 			<div off-canvas-navbar></div>
 			
-			<nav id="navbar" ng-class="visible-xs">
+			<!-- ********************* -->
+			<!-- You can use the same HTML for both desktop and mobile navbar. -->
+			<!-- Just remove ".visible-xs" class -->
+			<!-- ********************* -->			
+			<nav id="navbar" class="visible-xs">
 				<ul class="col-md-10 col-md-offset-2">
 				<li class="relative"><a ng-href="#/">Home</a>
 				<li class="relative"><a ng-href="#/">Home 2</a>

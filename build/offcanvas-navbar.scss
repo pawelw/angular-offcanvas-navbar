@@ -12,7 +12,6 @@
 .container {
 	overflow: hidden;
 	position: relative;
-	width: 100%;
 	@include transition(.2s);
 	@include translate3d(0,0,0);
 	&.menu-active {
