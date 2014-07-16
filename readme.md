@@ -24,5 +24,5 @@ By default CSS assumes that ".container" is the parent HTML element that will be
 
 Example
 ========================
-http://jsfiddle.net/yFRjr/2/
+http://jsfiddle.net/pawelw/yFRjr/3/
 
