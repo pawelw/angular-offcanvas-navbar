@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('initApp')
+angular.module('ngOffcanvas')
 	
 	/**!
 	 * AngularJS directve
