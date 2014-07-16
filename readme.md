@@ -14,7 +14,7 @@ Install
 	var myapp = angular.module('myapp', ['ngOffcanvas'])
 	```	
 	
-3. Add ng-csv directive to your main page container:
+3. Add off-canvas-navbar directive to your container (you must have it as a direct child element):
 
 	```html
 	<div off-canvas-navbar></div>
