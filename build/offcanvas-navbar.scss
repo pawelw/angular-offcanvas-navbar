@@ -1,5 +1,11 @@
+$iconSpritePath: "../images/glyphicons-halflings.png";
+$iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
+
+@import "../bower_components/bootstrap-sass/lib/bootstrap";
+//@import "offcanvas-navbar";
+
 /**!
-* Angular angular-offcanvas-navbar SCSS to be used with twitter bootstrap 3
+* Angular angular-offcanvas-navbar SCSS
 * @author Pawel Witkowski
 * thanks to sara soueidan for her animated icons - http://sarasoueidan.com/blog/navicon-transformicons/
 */ 
@@ -135,13 +141,14 @@ $color: #999;						// button color
 		ul {
 			margin-left: 0px;
 			padding: 15px;
-			width: 170px;
+			width: 200px; /* 170px if you don't use box-sizing: border-box; */
 			li {
 				list-style-type: none;
 				padding: 10px;
 				border-bottom: solid 1px #464646;
-				width: 150px;
+				width: 170px; /* 150px if you don't use box-sizing: border-box; */
 			}
 		}
 	}
 }
+
