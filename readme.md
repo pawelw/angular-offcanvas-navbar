@@ -7,7 +7,7 @@ Install
 ========================
 
 1. Add build/offcanvas-navbar.js to your main file (index.html)
-2. Add build/offcanvas-navbar.css or build/offcanvas-navbar.scss to your main file (index.html)
+2. Add build/offcanvas-navbar.css to your main file (index.html) or import and compile scss version
 2. Set ngOffcanvas as a dependency in your module
 
 	```javascript
