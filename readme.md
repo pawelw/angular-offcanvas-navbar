@@ -24,6 +24,7 @@ To install via bower run
 	```	
 	
 or if you don't have twitter bootstrap navbar in your HTML use this in your container
+
 	```html
 	<div off-canvas-navbar></div>
 	
