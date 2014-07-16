@@ -1,0 +1,17 @@
+{
+  "name": "angular-offcanvas-navbar",
+  "version": "1.0.0",
+  "main": "build/offcanvas-navbar.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bestiejs/angular-offcanvas-navbar.git"
+  },
+  "ignore": [
+    ".*",
+    "app"
+  ],
+  "dependencies": {
+    "angular": "~1.2.7",
+    "bootstrap-sass": "~3.0.2"
+	}
+}

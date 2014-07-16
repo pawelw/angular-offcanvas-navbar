@@ -1,0 +1,155 @@
+$iconSpritePath: "../images/glyphicons-halflings.png";
+$iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
+
+@import "../bower_components/bootstrap-sass/lib/bootstrap";
+//@import "offcanvas-navbar";
+
+/**!
+* Angular angular-offcanvas-navbar SCSS
+* @author Pawel Witkowski
+* thanks to sara soueidan for her animated icons - http://sarasoueidan.com/blog/navicon-transformicons/
+*/ 
+
+/* 
+*	Change ".container" class name to whatever your container is. 
+* It should be a HTMl object that contains whole content. 
+* This is the object that is animated left and right.
+-------------------------------------------------------------*/
+.container {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	@include transition(.2s);
+	@include translate3d(0,0,0);
+	&.menu-active {
+		overflow: visible;
+	}
+	&.expanded {
+		@include translate3d(-200px,0,0);
+	}
+	
+	.wrap {
+		padding: 20px;
+	}
+}
+
+/*
+* 3 lines Button styles
+-----------------------*/
+
+$button-size : 2.5em;		// button size 
+$transition: .2s; 			// increase this to see the transformations in slow-motion
+$color: #999;						// button color
+
+@mixin line {
+  display: inline-block;
+  width: $button-size;
+  height: $button-size/7;
+  background: #999;
+  border-radius: $button-size/14; 
+  transition: $transition;
+}
+ 
+.lines-button {
+	display: none;
+	transition: .3s;
+	user-select: none;
+	border-radius: 0.35714em;
+	padding: 10px 10px 15px 10px;
+	cursor: pointer;
+	margin: 10px;
+	// Make sure button is transparent
+  cursor: pointer;
+	background: transparent;
+	border: 0;
+	-webkit-appearance: none;
+
+  &:hover {
+    opacity: 1;
+  }
+ 
+  &:active {
+    transition: 0;
+    background: rgba(0,0,0,.1);
+    outline: none;
+  }
+  &:focus {
+	  outline: none;
+  }
+}
+
+.lines {   
+  //create middle line
+  @include line;
+  position: relative; 
+ 
+  /*create the upper and lower lines as pseudo-elements of the middle line*/
+  &:before, &:after {
+   
+    @include line;
+	  position: absolute;
+    left:0;
+    content: '';
+    transform-origin: $button-size/14 center;
+    -webkit-transform-origin: $button-size/14 center;
+  }
+  &:before { top: $button-size/4; }
+  &:after { top: -$button-size/4; }
+}
+
+.lines-button.x.expanded .lines{
+ 
+    /*hide the middle line*/
+    background: transparent;
+ 
+    /*overlay the lines by setting both their top values to 0*/
+    &:before, &:after{
+      transform-origin: 50% 50%;
+      -webkit-transform-origin: 50% 50%;
+      top:0;
+      width: $button-size;
+    }
+ 
+    // rotate the lines to form the x shape
+    &:before{
+      transform: rotate3d(0,0,1,45deg); 
+      -webkit-transform: rotate3d(0,0,1,45deg); 
+    }
+    &:after{
+      transform: rotate3d(0,0,1,-45deg); 
+      -webkit-transform: rotate3d(0,0,1,-45deg); 
+    }
+}
+
+/*
+* Addition to twitter bootstrap navbar styles.
+* For screens lower that 767px only
+---------------------------------------------*/
+
+@media only screen and (max-width: 767px) { 
+	.lines-button {
+		display: inline-block;	
+	}
+	
+	nav#navbar {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		height: 100%;	
+		@include translate3d(100%,0,0);
+		box-shadow: inset 0 0 30px #1B1B1B;
+		background: #2B2B2B;
+		ul {
+			margin-left: 0px;
+			padding: 15px;
+			width: 200px; /* 170px if you don't use box-sizing: border-box; */
+			li {
+				list-style-type: none;
+				padding: 10px;
+				border-bottom: solid 1px #464646;
+				width: 170px; /* 150px if you don't use box-sizing: border-box; */
+			}
+		}
+	}
+}
+

@@ -1,0 +1,137 @@
+/**!
+* Angular angular-offcanvas-navbar SCSS
+* @author Pawel Witkowski
+* thanks to sara soueidan for her animated icons - http://sarasoueidan.com/blog/navicon-transformicons/
+*/
+/* 
+*	Change ".container" class name to whatever your container is. 
+* It should be a HTMl object that contains whole content. 
+* This is the object that is animated left and right.
+-------------------------------------------------------------*/
+.container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.container.menu-active {
+  overflow: visible;
+}
+.container.expanded {
+  -webkit-transform: translate3d(-200px, 0, 0);
+  transform: translate3d(-200px, 0, 0);
+}
+.container .wrap {
+  padding: 20px;
+}
+
+/*
+* 3 lines Button styles
+-----------------------*/
+.lines-button {
+  display: none;
+  transition: .3s;
+  user-select: none;
+  border-radius: 0.35714em;
+  padding: 10px 10px 15px 10px;
+  cursor: pointer;
+  margin: 10px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+.lines-button:hover {
+  opacity: 1;
+}
+.lines-button:active {
+  transition: 0;
+  background: rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+.lines-button:focus {
+  outline: none;
+}
+
+.lines {
+  display: inline-block;
+  width: 2.5em;
+  height: 0.35714em;
+  background: #999;
+  border-radius: 0.17857em;
+  transition: 0.2s;
+  position: relative;
+  /*create the upper and lower lines as pseudo-elements of the middle line*/
+}
+.lines:before, .lines:after {
+  display: inline-block;
+  width: 2.5em;
+  height: 0.35714em;
+  background: #999;
+  border-radius: 0.17857em;
+  transition: 0.2s;
+  position: absolute;
+  left: 0;
+  content: '';
+  transform-origin: 0.17857em center;
+  -webkit-transform-origin: 0.17857em center;
+}
+.lines:before {
+  top: 0.625em;
+}
+.lines:after {
+  top: -0.625em;
+}
+
+.lines-button.x.expanded .lines {
+  background: transparent;
+}
+.lines-button.x.expanded .lines:before, .lines-button.x.expanded .lines:after {
+  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  top: 0;
+  width: 2.5em;
+}
+.lines-button.x.expanded .lines:before {
+  transform: rotate3d(0, 0, 1, 45deg);
+  -webkit-transform: rotate3d(0, 0, 1, 45deg);
+}
+.lines-button.x.expanded .lines:after {
+  transform: rotate3d(0, 0, 1, -45deg);
+  -webkit-transform: rotate3d(0, 0, 1, -45deg);
+}
+
+/*
+* Addition to twitter bootstrap navbar styles.
+* For screens lower that 767px only
+---------------------------------------------*/
+@media only screen and (max-width: 767px) {
+  .lines-button {
+    display: inline-block;
+  }
+
+  nav#navbar {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    box-shadow: inset 0 0 30px #1B1B1B;
+    background: #2B2B2B;
+  }
+  nav#navbar ul {
+    margin-left: 0px;
+    padding: 15px;
+    width: 200px; /* 170px if you don't use box-sizing: border-box; */
+  }
+  nav#navbar ul li {
+    list-style-type: none;
+    padding: 10px;
+    border-bottom: solid 1px #464646;
+    width: 170px; /* 150px if you don't use box-sizing: border-box; */
+  }
+}
