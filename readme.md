@@ -6,7 +6,8 @@ Angular Offcanvas Navbar is an angularJs directive that creates a side navigatio
 Install
 ========================
 
-1. Add offcanvas-navbar.js to your main file (index.html)
+1. Add build/offcanvas-navbar.js to your main file (index.html)
+2. Add build/offcanvas-navbar.css or build/offcanvas-navbar.scss to your main file (index.html)
 2. Set ngOffcanvas as a dependency in your module
 
 	```javascript
@@ -19,9 +20,9 @@ Install
 	<div off-canvas-navbar></div>
 	```	
 	
-By default CSS uses .container as the parent containig HTML element. This parent HML element is the one that will be animated.
+By default CSS assumes that ".container" is the parent HTML element that will be animated. If you want to use different class name please change in offcanvas-navbar.css or offcanvas-navbar.scss if you are using sass.
 
 Example
 ========================
-http://jsfiddle.net/yFRjr/1/
+http://jsfiddle.net/yFRjr/2/
 
